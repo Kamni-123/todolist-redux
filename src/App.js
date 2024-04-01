@@ -4,7 +4,7 @@ import ToDoList from './components/ToDoList';
 
 const Demo = styled('div')(({ theme }) => ({
   backgroundColor: theme.palette.background.paper,
-  backgroundImage: 'url("https://images.pexels.com/photos/2736499/pexels-photo-2736499.jpeg?cs=srgb&dl=pexels-content-pixie-2736499.jpg&fm=jpg")',
+  backgroundImage: 'url("https://wallpapers.com/images/hd/cute-desktop-organizer-october-to-do-list-7b0rwkvxpvavpcaw.jpg")',
   backgroundSize: 'container',
   backgroundPosition: 'center',
   minHeight: '100vh', // Ensures the background covers the entire page height
@@ -15,17 +15,20 @@ const Demo = styled('div')(({ theme }) => ({
 function App() {
   return (
     
-      <Demo>
+      
         <>
-
+        <Demo>
         <Header></Header>
         
         <ToDoList></ToDoList>
+        </Demo>
+
+        
         
         
         </>
 
-      </Demo>
+      
     
   );
 }

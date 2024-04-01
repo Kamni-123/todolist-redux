@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useSelector } from 'react-redux';
-import { styled } from '@mui/material/styles';
+
 import List from '@mui/material/List';
 
 import ToDoItem from './ToDoItem';

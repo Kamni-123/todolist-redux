@@ -31,16 +31,16 @@ export default function Header() {
   }
 
   return (
-    <Box className="bg-gray-200 p-4">
-      <AppBar position="static" className="bg-white shadow-md">
-        <Toolbar className="justify-between">
-          <Typography variant="h6" component="div" className="font-bold tracking-wider">
+    <Box className=" mt-24 ml-8 mr-3  flex items-center justify-between ">
+      <AppBar position="static" className="bg-black shadow-md">
+        <Toolbar className="bg-purple-300 justify-between">
+          <Typography variant="h6" component="div" className="font-bold tracking-wider mr-auto" color="#35374B">
             To Do List
           </Typography>
           <IconButton
             size="medium"
             edge="end"
-            color="inherit"
+            
             aria-label="add"
             onClick={handleClickOpen}
           >
@@ -52,4 +52,5 @@ export default function Header() {
     </Box>
   );
 }
+
 
