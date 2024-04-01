@@ -4,6 +4,9 @@ import { AppBar, Toolbar, Typography, IconButton, Box } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import { SimpleDialog } from './ItemDialog';
 import { ADD_ITEM } from '../actions/actions';
+// import { Link } from 'react-router-dom';
+// import { FaBars } from "react-icons/fa";
+// import { CgProfile } from "react-icons/cg";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -49,6 +52,7 @@ export default function Header() {
         </Toolbar>
       </AppBar>
       <SimpleDialog open={open} onClose={handleClose} value="" />
+
     </Box>
   );
 }

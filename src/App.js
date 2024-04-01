@@ -1,37 +1,23 @@
-import { styled } from '@mui/material/styles';
+// import { Routes, Route } from "react-router-dom";
+// import Login from './Login/login';
+// import Register from '../src/Login/Register';
 import Header from './components/Header';
 import ToDoList from './components/ToDoList';
 
-const Demo = styled('div')(({ theme }) => ({
-  backgroundColor: theme.palette.background.paper,
-  backgroundImage: 'url("https://wallpapers.com/images/hd/cute-desktop-organizer-october-to-do-list-7b0rwkvxpvavpcaw.jpg")',
-  backgroundSize: 'container',
-  backgroundPosition: 'center',
-  minHeight: '100vh', // Ensures the background covers the entire page height
-  display: 'flex',
-  flexDirection: 'column',
-}));
-
 function App() {
   return (
-    
-      
-        <>
-        <Demo>
-        <Header></Header>
-        
-        <ToDoList></ToDoList>
-        </Demo>
-
-        
-        
-        
-        </>
-
-      
-    
+    <div className="bg-white bg-cover bg-center min-h-screen flex flex-col" style={{ backgroundImage: 'url("https://wallpapers.com/images/hd/cute-desktop-organizer-october-to-do-list-7b0rwkvxpvavpcaw.jpg")' }}>
+     <Header/>
+     <ToDoList/>
+     {/* <Routes>
+       <Route path="/login" element={<Login />} />
+       <Route path="/register" element={<Register />} />
+     </Routes> */}
+    </div>
   );
-}
+} 
 
 export default App;
+
+
 
