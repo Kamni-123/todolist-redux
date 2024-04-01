@@ -63,10 +63,10 @@ export default function ToDoItem(props) {
                 </Menu>
             </Box>
         }>
-            <ListItemButton  sx={{ color: 'white' }} onClick={handleItemClick}>
-                <ListItemText sx={{ color: 'white' }} primary={props.value} style={{ textDecoration: props.is_complete ? 'line-through' : 'none', width: '50%' }} />
+            <ListItemButton  onClick={handleItemClick}>
+                <ListItemText  primary={props.value} style={{ textDecoration: props.is_complete ? 'line-through' : 'none', width: '50%' }} />
             </ListItemButton>
-            <SimpleDialog sx={{ color: 'white' }} open={openDialog} onClose={handleEditClose} value={props.value} />
+            <SimpleDialog  open={openDialog} onClose={handleEditClose} value={props.value} />
         </ListItem>
     );
 }

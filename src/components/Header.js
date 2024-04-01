@@ -5,7 +5,7 @@ import AddIcon from "@mui/icons-material/Add";
 import { SimpleDialog } from "./ItemDialog";
 import { ADD_ITEM } from "../actions/actions";
 import { Link } from "react-router-dom";
-import { FaBars } from "react-icons/fa";
+
 import { CgProfile } from "react-icons/cg";
 
 export default function Header() {
@@ -35,8 +35,8 @@ export default function Header() {
 
   return (
     <Box className=" mt-24 ml-8 mr-3  flex items-center justify-end ">
-      <AppBar position="static" className="bg-black shadow-md">
-        <Toolbar className="bg-purple-300 justify-between rounded-lg">
+      <AppBar position="static" className="bg-black">
+        <Toolbar className="bg-purple-300 justify-between rounded-lg shadow-2xl">
           <Typography
             variant="h6"
             component="div"
