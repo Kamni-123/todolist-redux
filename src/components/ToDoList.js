@@ -1,24 +1,24 @@
-import { useSelector } from "react-redux";
 import * as React from 'react';
+import { useSelector } from 'react-redux';
 import { styled } from '@mui/material/styles';
 import List from '@mui/material/List';
 
-import ToDoItem from "./ToDoItem";
+import ToDoItem from './ToDoItem';
 
-const Demo = styled('div')(({ theme }) => ({
-  backgroundColor: theme.palette.background.paper,
-}));
 
-export default function ToDoList() {
+const App = () => {
   const list = useSelector((state) => state.list);
 
   return (
-    <Demo>
-        <List>
+    
+      <List>
         {list.map((x, index) => (
-            <ToDoItem key={index} {...x} i={index}></ToDoItem>
+          <ToDoItem key={index} {...x} i={index}></ToDoItem>
         ))}
-        </List>
-    </Demo>
+      </List>
+   
   );
-}
+};
+
+export default App;
+

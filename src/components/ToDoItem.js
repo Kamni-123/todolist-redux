@@ -12,6 +12,7 @@ import { useDispatch } from 'react-redux';
 import { EDIT_ITEM, DELETE_ITEM, TOGGLE_COMPLETE } from '../actions/actions';
 import { SimpleDialog } from './ItemDialog';
 import { ListItemText } from '@mui/material';
+import { blueGrey } from '@mui/material/colors';
 
 export default function ToDoItem(props) {
     const [openDialog, setOpenDialog] = useState(false);
@@ -48,6 +49,7 @@ export default function ToDoItem(props) {
     const handleDeleteClick = () => {
         handleMenuClose();
         dispatch({
+            hover: blueGrey,
             type: DELETE_ITEM,
             payload: props.i
         }); 
