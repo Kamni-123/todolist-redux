@@ -4,9 +4,9 @@ import { AppBar, Toolbar, Typography, IconButton, Box } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import { SimpleDialog } from './ItemDialog';
 import { ADD_ITEM } from '../actions/actions';
-// import { Link } from 'react-router-dom';
-// import { FaBars } from "react-icons/fa";
-// import { CgProfile } from "react-icons/cg";
+import { Link } from 'react-router-dom';
+import { FaBars } from "react-icons/fa";
+import { CgProfile } from "react-icons/cg";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -34,9 +34,9 @@ export default function Header() {
   }
 
   return (
-    <Box className=" mt-24 ml-8 mr-3  flex items-center justify-between ">
+    <Box className=" mt-24 ml-8 mr-3  flex items-center justify-end ">
       <AppBar position="static" className="bg-black shadow-md">
-        <Toolbar className="bg-purple-300 justify-between">
+        <Toolbar className="bg-purple-300 justify-between rounded-lg">
           <Typography variant="h6" component="div" className="font-bold tracking-wider mr-auto" color="#35374B">
             To Do List
           </Typography>
@@ -49,6 +49,10 @@ export default function Header() {
           >
             <AddIcon />
           </IconButton>
+          <Link to={'/login'} className='flex  items-center px-3 py-3  gap-2 '>
+        
+        <div className=' text-white '><CgProfile size={23}  /></div>
+        </Link>
         </Toolbar>
       </AppBar>
       <SimpleDialog open={open} onClose={handleClose} value="" />
