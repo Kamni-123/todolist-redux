@@ -24,7 +24,7 @@ export function SimpleDialog(props) {
   }
 
   return (
-    <Dialog onClose={handleClose} open={open}>
+    <Dialog  onClose={handleClose} open={open}>
       <DialogTitle>{props.value ? "Edit List Item" : "Add List Item"}</DialogTitle>
       <DialogContent>
           <TextField

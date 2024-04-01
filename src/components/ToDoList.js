@@ -11,9 +11,9 @@ const App = () => {
 
   return (
     
-      <List>
+      <List >
         {list.map((x, index) => (
-          <ToDoItem key={index} {...x} i={index}></ToDoItem>
+          <ToDoItem  key={index} {...x} i={index}></ToDoItem>
         ))}
       </List>
    

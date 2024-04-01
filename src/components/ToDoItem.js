@@ -52,21 +52,21 @@ export default function ToDoItem(props) {
     }
 
     return (
-        <ListItem secondaryAction={
-            <Box>
-                <IconButton edge="end" aria-label="menu" onClick={handleMenuClick}>
+        <ListItem sx={{ color: 'white' }} secondaryAction={ 
+            <Box sx={{ color: 'white' }}>
+                <IconButton edge="end" aria-label="menu" sx={{ color: 'white' }} onClick={handleMenuClick}>
                     <MoreVertIcon />
                 </IconButton>
-                <Menu id="basic-menu" anchorEl={anchorEl} open={openMenu} onClose={handleMenuClose} PaperProps={{ style: { width: '10ch' } }}>
+                <Menu id="basic-menu" sx={{ color: 'white' }} anchorEl={anchorEl} open={openMenu} onClose={handleMenuClose} PaperProps={{ style: { width: '10ch' } }}>
                     <MenuItem style={{ display: 'flex', justifyContent: 'center' }} onClick={handleEditClick}>Edit</MenuItem>
                     <MenuItem style={{ display: 'flex', justifyContent: 'center' }} onClick={handleDeleteClick}>Delete</MenuItem>
                 </Menu>
             </Box>
         }>
-            <ListItemButton onClick={handleItemClick}>
-                <ListItemText primary={props.value} style={{ textDecoration: props.is_complete ? 'line-through' : 'none', width: '50%' }} />
+            <ListItemButton  sx={{ color: 'white' }} onClick={handleItemClick}>
+                <ListItemText sx={{ color: 'white' }} primary={props.value} style={{ textDecoration: props.is_complete ? 'line-through' : 'none', width: '50%' }} />
             </ListItemButton>
-            <SimpleDialog open={openDialog} onClose={handleEditClose} value={props.value} />
+            <SimpleDialog sx={{ color: 'white' }} open={openDialog} onClose={handleEditClose} value={props.value} />
         </ListItem>
     );
 }
